@@ -48,7 +48,7 @@ h3 {
   width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto 94px auto;
+  margin: 0 auto 0 auto;
   /* outline: 2px solid #757575; */
 }
 .hidden {
@@ -72,6 +72,8 @@ h3 {
 .nav {
   display: flex;
   align-items: center;
+  margin-top: 24px;
+  margin-bottom: 25px;
 
   font-weight: 500;
   font-size: 14px;
@@ -91,7 +93,7 @@ h3 {
 
 .contact-nav {
   display: flex;
-  margin-left: 334px;
+  margin-left: auto;
 }
 
 .contact-nav .item:not(:first-child) {
@@ -99,6 +101,7 @@ h3 {
 }
 
 .site-nav .link {
+  padding-bottom: 32px;
   color: var(--title-text-color);
   text-decoration: none;
 }
@@ -191,6 +194,9 @@ h3 {
 }
 
 /* section */
+.section {
+  margin-bottom: 94px;
+}
 
 .section .title {
   margin-bottom: 10px;
@@ -231,6 +237,7 @@ h3 {
 }
 .section-work /* наша команда */ {
   padding-bottom: 94px;
+  padding-top: 94px;
   margin-bottom: 94px;
   background-color: #f5f4fa;
 }
@@ -295,9 +302,15 @@ h3 {
   background-color: var(--accent-color);
 }
 /* портфолио */
+.section-port {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .button-filter {
   display: flex;
-  padding: 6px 22px;
+  justify-content: center;
+  /* padding: 6px 22px; */
   margin-bottom: 0;
   border-radius: 4px;
 
@@ -310,17 +323,21 @@ h3 {
   text-align: center;
 }
 
+.filter > :not(:first-child) {
+  margin-left: 8px;
+}
+
 .button-filter:hover,
 .button-filter:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
-.section .list-container {
+.section-port .list-container {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
 }
-.section .flex-element {
+.section-port .flex-element {
   width: 380px;
   margin: 15px;
 
@@ -352,25 +369,28 @@ h3 {
   line-height: 1.87;
 }
 
-.section .filter {
+.section-port .filter {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-top: 0;
   margin-bottom: 68px;
 }
 /* footer */
 .footer {
+  padding-bottom: 21px;
+  padding-top: 48px;
   background-color: var(--footer-background-color);
 }
 
-.footer .container {
+/* .footer .container {
   padding-top: 48px;
-}
+} */
 
 .footer-flex {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .footer-flex .item {
@@ -410,7 +430,12 @@ h3 {
   color: var(--primary-white-color);
 }
 
+.send-button {
+  display: flex;
+}
+
 .footer .copyright {
+  margin: 0;
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
   font-size: 12px;

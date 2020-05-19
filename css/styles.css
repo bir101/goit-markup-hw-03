@@ -44,8 +44,11 @@ h3 {
   margin: 0;
 }
 
+img {
+  display: block;
+}
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto 0 auto;
@@ -72,8 +75,8 @@ h3 {
 .nav {
   display: flex;
   align-items: center;
-  margin-top: 24px;
-  margin-bottom: 25px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 
   font-weight: 500;
   font-size: 14px;
@@ -84,7 +87,6 @@ h3 {
 .site-nav {
   display: flex;
   margin-left: 86px;
-  list-style-type: none;
 }
 
 .site-nav .item:not(:first-child) {
@@ -101,7 +103,9 @@ h3 {
 }
 
 .site-nav .link {
+  padding-top: 32px;
   padding-bottom: 32px;
+
   color: var(--title-text-color);
   text-decoration: none;
 }
@@ -126,13 +130,14 @@ h3 {
 .contact-link:focus {
   color: var(--accent-color);
 }
+
 /* hero */
 .hero {
   text-align: center;
 }
 .hero-title {
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 46px;
 
   color: var(--primary-white-color);
   background-color: #afb1b8;
@@ -144,10 +149,10 @@ h3 {
   text-align: center;
 }
 
-.section-work .image,
+/* .section-work .image,
 .section .image {
   display: block;
-}
+} */
 /* button */
 .button-primary {
   display: inline-block;
@@ -163,6 +168,7 @@ h3 {
 
   font-size: 16px;
   line-height: 1.86;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-decoration: none;
   text-align: center;
@@ -172,7 +178,7 @@ h3 {
   text-decoration: none;
 }
 .text-title {
-  padding: 27px 87px;
+  padding: 27px 82px;
   background-color: rgba(47, 48, 58, 0.8);
   color: #ffffff;
 
@@ -195,7 +201,8 @@ h3 {
 
 /* section */
 .section {
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .section .title {
@@ -213,14 +220,15 @@ h3 {
   line-height: 1.7;
 }
 
-.list,
-.section-list {
+.list /*преимущества, постоянные клиенты*/ ,
+.section-list /*чем мы занимаемся*/,
+.work-list /*наша команда*/ {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .list .item {
-  width: 278px;
+  width: 170px;
 }
 .list .item:not(:first-child) {
   margin-left: 30px;
@@ -238,7 +246,7 @@ h3 {
 .section-work /* наша команда */ {
   padding-bottom: 94px;
   padding-top: 94px;
-  margin-bottom: 94px;
+
   background-color: #f5f4fa;
 }
 
@@ -258,9 +266,9 @@ h3 {
   text-align: center;
 }
 
-.work-list {
+/* .work-list {
   display: flex;
-}
+} */
 
 .work-list .image {
   margin-bottom: 30px;
@@ -289,6 +297,8 @@ h3 {
 }
 
 .section-work .text {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
@@ -337,20 +347,28 @@ h3 {
   flex-wrap: wrap;
   margin: -15px;
 }
-.section-port .flex-element {
-  width: 380px;
+.flex-element {
+  min-width: 370px;
   margin: 15px;
 
-  border: 1px solid #eeeeee;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
 }
-.portfolio-image {
-  margin-bottom: 20px;
-}
+/* .portfolio-image {
+  
+} */
 
+.portfolio .cart-content {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .portfolio .title {
-  margin-bottom: 20px;
-  margin-left: 24px;
+  margin-bottom: 4px;
 
   color: var(--title-text-color);
   font-weight: 700;
@@ -359,9 +377,7 @@ h3 {
   letter-spacing: 0.06em;
 }
 .portfolio .portfolio-title {
-  margin-top: 0;
-  margin-bottom: 26px;
-  margin-left: 24px;
+  margin: 0;
 }
 
 .portfolio .text {
@@ -385,21 +401,20 @@ h3 {
   background-color: var(--footer-background-color);
 }
 
-/* .footer .container {
-  padding-top: 48px;
-} */
+
 
 .footer-flex {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-start; */
+  align-items: baseline;
+  padding-bottom: 28px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-flex .item {
-  display: flex;
-  flex-direction: column;
-}
+
 .footer .footer-title {
+  display: inline-block;
   margin-bottom: 21px;
   color: var(--primary-white-color);
 
@@ -430,10 +445,6 @@ h3 {
 
 .address > span {
   color: var(--primary-white-color);
-}
-
-.send-button {
-  display: flex;
 }
 
 .footer .copyright {

@@ -44,9 +44,9 @@ h3 {
   margin: 0;
 }
 
-img {
+/* img {
   display: block;
-}
+} */
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -54,8 +54,15 @@ img {
   margin: 0 auto 0 auto;
   /* outline: 2px solid #757575; */
 }
+
+
 .hidden {
-  display: none;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  …
 }
 /* Лого */
 .logo {
@@ -149,10 +156,10 @@ img {
   text-align: center;
 }
 
-/* .section-work .image,
+.section-work .image,
 .section .image {
   display: block;
-} */
+}
 /* button */
 .button-primary {
   display: inline-block;
@@ -401,8 +408,6 @@ img {
   background-color: var(--footer-background-color);
 }
 
-
-
 .footer-flex {
   display: flex;
   justify-content: space-between;
@@ -411,7 +416,6 @@ img {
   margin-bottom: 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 
 .footer .footer-title {
   display: inline-block;
